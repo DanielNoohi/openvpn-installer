@@ -92,7 +92,7 @@ sudo -i
 ```
 #### Then:
 ```
-wget "https://raw.githubusercontent.com/DanielNoohi/openvpn-installer/blob/main/OpenInstaller.sh" -O OpenInstaller.sh && chmod +x OpenInstaller.sh && bash OpenInstaller.sh
+wget "https://raw.githubusercontent.com/DanielNoohi/openvpn-installer/main/OpenInstaller.sh" -O OpenInstaller.sh && chmod +x OpenInstaller.sh && bash OpenInstaller.sh
 ```
 
 

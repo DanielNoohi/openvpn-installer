@@ -71,13 +71,13 @@ ask_reboot() {
 # Timezone
 set_timezone() {
     echo 
-    yellow_msg 'Setting TimeZone to Europe/Berlin.'
+    yellow_msg 'Setting TimeZone to Europe/Amsterdam.'
     echo
     sleep 0.5
 
-    timedatectl set-timezone Europe/Berlin
+    timedatectl set-timezone Europe/Amsterdam
     echo 
-    green_msg 'TimeZone set to Europe/Berlin.'
+    green_msg 'TimeZone set to Europe/Amsterdam.'
     echo
     sleep 0.5
 }
@@ -383,6 +383,7 @@ install_openvpn() {
     sleep 0.5
 
     sudo apt -y install openvpn
+    sudo apt -y install openvpn-dco-dkms
 
     echo
     green_msg 'OpenVPN Installed Successfully.'
@@ -414,8 +415,8 @@ key /etc/openvpn/server/server.key
 # Network configuration for VPN clients
 server 10.8.0.0 255.255.255.0
 push "redirect-gateway def1 bypass-dhcp"
-push "dhcp-option DNS 8.8.8.8"
-push "dhcp-option DNS 8.8.4.4"
+push "dhcp-option DNS 1.1.1.1"
+push "dhcp-option DNS 1.0.0.1"
 EOF
 
     # Generate a server key and certificate (you can replace these with your own)
